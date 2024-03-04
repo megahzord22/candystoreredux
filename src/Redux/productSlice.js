@@ -11,7 +11,7 @@ const productSlice = createSlice({
                 id: currId++
             })
         },
-        toggleProduct(state, action) {
+        subtractProduct(state, action) {
             const product = state.find(t => t.id === action.payload)
             if (product) {
                 product.completed = !product.completed
