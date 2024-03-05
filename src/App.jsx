@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import  { setProducts, addProduct, subProduct }  from './Redux/productSlice'
+import Cart from './components/cart'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -34,6 +35,7 @@ const App = () => {
   return (
     <div>
       <h1>Welcome to the Penny Candy Store!</h1>
+      <Cart></Cart>
     </div>
   )
 }
