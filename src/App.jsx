@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetchProducts } from './Redux/productSlice'
+import  { setProducts, addProduct, subProduct }  from './Redux/productSlice'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ const App = () => {
           throw new Error('Could not fetch products')
         }
         const data = await response.json()
-        dispatch(fetchProducts(data))
+        dispatch(setProducts(data))
       } catch (error) {
         console.error('Issue fetching products:', error.message)
       }
@@ -21,6 +21,15 @@ const App = () => {
 
     fetchData()
   }, [dispatch])
+  const addToCart = (productId, quantity) => {
+    // Dispatch action to add products
+    dispatch(addProduct({ productId, quantity }));
+  }
+
+  const removeFromCart = (productId, quantity) => {
+    // Dispatch action to subtract products
+    dispatch(subProduct({ productId, quantity }));
+  }
 
   return (
     <div>
