@@ -15,7 +15,7 @@ const App = () => {
         const data = await response.json()
         dispatch(fetchProducts(data))
       } catch (error) {
-        console.error('Error fetching products:', error.message)
+        console.error('Issue fetching products:', error.message)
       }
     }
 
