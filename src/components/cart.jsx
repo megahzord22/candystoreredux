@@ -1,7 +1,7 @@
-// Cart.jsx
+
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { removeFromCart } from './Redux/productSlice'
+import { removeFromCart } from '..Redux/productSlice'
 
 const Cart = () => {
   const cartItems = useSelector(state => state.products.cart) // Access cart items 
