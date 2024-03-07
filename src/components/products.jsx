@@ -1,14 +1,16 @@
 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import { setProducts } from '../Redux/productSlice'
+import { addToCart } from '../Redux/cartSlice'
 const Products = () => {
-  const products = useSelector(state => state.products.products); // Accessing products from state
+  const products = useSelector(state => state.products)
+  console.log(products)
   const dispatch = useDispatch()
 
   const handleAddToCart = (productId, quantity) => {
     dispatch(addToCart({ productId, quantity }))
-  };
+  }
 
   return (
     <div>

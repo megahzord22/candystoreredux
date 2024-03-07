@@ -8,7 +8,7 @@ const productSlice = createSlice({
       return action.payload
     },
     addProduct(state, action) {
-      const { productId, quantity } = action.payload;
+      const { productId, quantity } = action.payload
       const productIndex = state.findIndex(product => product.id === productId)
       if (productIndex !== -1) {
         state[productIndex].inStock += quantity
