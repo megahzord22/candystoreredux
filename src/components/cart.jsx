@@ -1,13 +1,13 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from '../Redux/cartSlice';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeFromCart } from '../Redux/cartSlice'
 
 const Cart = () => {
-  const cartItems = useSelector(state => state.cart);
-  const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart)
+  const dispatch = useDispatch()
 
   const handleRemoveFromCart = (productId, quantity) => {
-    dispatch(removeFromCart({ productId, quantity }));
+    dispatch(removeFromCart({ productId, quantity }))
   };
 
   return (
