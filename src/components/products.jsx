@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setProducts } from '../Redux/productSlice'
+import { setProducts, subProduct } from '../Redux/productSlice'
 import { addToCart } from '../Redux/cartSlice'
 import './candy.css'
 const Products = () => {
@@ -11,6 +11,7 @@ const Products = () => {
 
   const handleAddToCart = (productId, quantity) => {
     dispatch(addToCart({ productId, quantity }))
+    dispatch(subProduct({ productId, quantity }))
   }
 
   return (

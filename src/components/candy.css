@@ -7,7 +7,7 @@
     margin-top: 20px;
     margin-left: 30px;
     margin-bottom: 40px;
-    max-width: 300px;
+    width: 300px;
     position: relative; 
     display: flex; 
     flex-direction: column; 
@@ -15,7 +15,7 @@
     align-items: center; 
   }
   
-  /* Pink border styling */
+  /* Pink border */
   .candy-card::before {
     content: '';
     position: absolute;
@@ -94,4 +94,9 @@ ul.candy-list {
     list-style-type: none !important;
     padding: 0;
   }
+
+.candy-list {
+  display: flex;
+  flex-wrap: wrap;
+}
   
