@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Welcome to the Penny Candy Store!</h1>
+      <h1>Penny Pincher's Candy Co.</h1>
       <Products></Products>
       {/* <Cart></Cart> */}
     </div>

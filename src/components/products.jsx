@@ -3,6 +3,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setProducts } from '../Redux/productSlice'
 import { addToCart } from '../Redux/cartSlice'
+import './candy.css'
 const Products = () => {
   const products = useSelector(state => state.products)
   console.log(products)
@@ -14,15 +15,16 @@ const Products = () => {
 
   return (
     <div>
-      <h2>Available Products</h2>
-      <ul>
+      <h2>Here's what we have today:</h2>
+      <ul className='candy-list'>
         {products.map(product => (
-          <li key={product.id}>
-            <div>{product.name}</div>
-            <div>Price: ${product.price}</div>
-            <div>In Stock: {product.inStock}</div>
+          <li key={product.id} className='candy-card'>
+            <div><img className='candy-image'src={product.photoUrl} alt={product.name}></img></div>
+            <div className='candy-name'>{product.name}</div>
+            <div className='candy-price'>Price: ${product.price}</div>
+            <div className='candy-stock'>In Stock: {product.inStock}</div>
             <input type="number" min="0" defaultValue="0" />
-            <button onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>Add to Cart</button>
+            <button className='add-to-cart' onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>Add to Cart</button>
           </li>
         ))}
       </ul>
