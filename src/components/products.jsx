@@ -6,7 +6,6 @@ import { addToCart } from '../Redux/cartSlice'
 import './candy.css'
 const Products = () => {
   const products = useSelector(state => state.products)
-  console.log(products)
   const dispatch = useDispatch()
 
   const handleAddToCart = (productId, quantity) => {
@@ -32,7 +31,12 @@ const Products = () => {
             <div className='candy-stock'>In Stock: {product.inStock}</div>
             <div className='input-container'>
               <input type="number" min="0" defaultValue="0" />
-              <button className='add-to-cart' onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>Add to Cart</button>
+              <button 
+                disabled={product.inStock === 0}
+                className='add-to-cart' 
+                onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>
+                {product.inStock === 0 ? "Out of stock" : "Add to Cart"}
+              </button>
             </div>
           </li>
         ))}
