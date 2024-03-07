@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import  { setProducts, addProduct, subProduct }  from './Redux/productSlice'
-// import Cart from './components/cart'
+import Cart from './components/cart'
 import Products from './components/products'
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
     <div>
       <h1>Penny Pincher's Candy Co.</h1>
       <Products></Products>
-      {/* <Cart></Cart> */}
+      <Cart></Cart>
     </div>
   )
 }
