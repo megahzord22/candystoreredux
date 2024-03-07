@@ -10,6 +10,12 @@ const Products = () => {
   const dispatch = useDispatch()
 
   const handleAddToCart = (productId, quantity) => {
+    const product = products.find(product => product.id === productId)
+
+    if (quantity > product.inStock) {
+        alert("Sorry, too many items!")
+        return
+    }
     dispatch(addToCart({ productId, quantity }))
     dispatch(subProduct({ productId, quantity }))
   }
