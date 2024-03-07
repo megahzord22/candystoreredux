@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import  { setProducts, addProduct, subProduct }  from './Redux/productSlice'
 import Cart from './components/cart'
 import Products from './components/products'
+import CartIcon from './components/cartIcon'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -36,6 +37,7 @@ const App = () => {
   return (
     <div>
       <h1>Penny Pincher's Candy Co.</h1>
+      <CartIcon></CartIcon>
       <Products></Products>
       <Cart></Cart>
     </div>
