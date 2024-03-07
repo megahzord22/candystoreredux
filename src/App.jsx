@@ -4,6 +4,8 @@ import  { setProducts, addProduct, subProduct }  from './Redux/productSlice'
 import Cart from './components/cart'
 import Products from './components/products'
 import CartIcon from './components/cartIcon'
+import candyLogo from './candylogo.jpg'
+import './main.css'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -36,8 +38,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Penny Pincher's Candy Co.</h1>
-      <CartIcon></CartIcon>
+      <h1>Penny Pincher's Candy Co. <img className='candy-logo' src={candyLogo} alt='candy-logo'></img> <CartIcon></CartIcon></h1>
       <Products></Products>
       <Cart></Cart>
     </div>
