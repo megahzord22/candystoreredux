@@ -4,7 +4,9 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 40px;
     max-width: 300px;
     position: relative; 
     display: flex; 
@@ -70,12 +72,22 @@
   }
   
   .add-to-cart:hover {
-    background-color: #000; 
+    background-color: #ff6b6b; 
+  }
+
+  /* Container for input and button */
+.input-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 10px; 
+    flex-direction: row;
   }
   
   li input[type="number"] {
     margin-right: 10px; /* Add space between input and button */
     width: 50px;
+    display: inline-block;
   }
   /* Remove bullet points */
 ul.candy-list {

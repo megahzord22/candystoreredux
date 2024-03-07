@@ -23,8 +23,10 @@ const Products = () => {
             <div className='candy-name'>{product.name}</div>
             <div className='candy-price'>Price: ${product.price}</div>
             <div className='candy-stock'>In Stock: {product.inStock}</div>
-            <input type="number" min="0" defaultValue="0" />
-            <button className='add-to-cart' onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>Add to Cart</button>
+            <div className='input-container'>
+              <input type="number" min="0" defaultValue="0" />
+              <button className='add-to-cart' onClick={() => handleAddToCart(product.id, parseInt(event.target.previousElementSibling.value))}>Add to Cart</button>
+            </div>
           </li>
         ))}
       </ul>
