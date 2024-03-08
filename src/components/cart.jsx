@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { removeFromCart } from '../Redux/cartSlice'
+import { removeFromCart, clearCart } from '../Redux/cartSlice'
 import { addProduct } from '../Redux/productSlice'
 
 const Cart = () => {
@@ -10,6 +10,9 @@ const Cart = () => {
   const handleRemoveFromCart = (productId, quantity) => {
     dispatch(removeFromCart({ productId, quantity }))
     dispatch(addProduct({ productId, quantity }))
+  }
+  const handleCheckout = () => {
+    dispatch(clearCart())
   }
 
   return (
@@ -27,8 +30,9 @@ const Cart = () => {
           </li>
         ))}
       </ul>
+      <button onClick={handleCheckout}>Checkout</button>
     </div>
-  );
-};
+  )
+}
 
 export default Cart;
