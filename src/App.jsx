@@ -30,17 +30,23 @@ const App = () => {
 
   return (
     <div>
-      <h1>
-        Penny Pincher's Candy Co.{' '}
-        <img className='candy-logo' src={candyLogo} alt='candy-logo' />{' '}
-        <CartIcon />
-      </h1>
+      <nav className="navbar">
+        <div className="left-section">
+          <Link to="/" className="brand">
+            Penny Pincher's Candy Co.
+            <img className='candy-logo' src={candyLogo} alt='candy-logo' />
+          </Link>
+        </div>
+        <div className="right-section">
+          <CartIcon />
+        </div>
+      </nav>
       <Routes>
         <Route exact path="/" element={<Products/>} />
         <Route exact path="cart" element={<Cart/>} />
       </Routes>
     </div>
-  );
-};
+  )
+}
 
 export default App;

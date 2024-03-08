@@ -21,7 +21,6 @@ const Products = () => {
 
   return (
     <div>
-      <h2>Here's what we have today:</h2>
       <ul className='candy-list'>
         {products.map(product => (
           <li key={product.id} className='candy-card'>

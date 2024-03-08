@@ -19,7 +19,6 @@ const Cart = () => {
   return (
     <div>
       <h2>Shopping Cart</h2>
-      <button onClick={navigateBack}>{'< Back to Products'}</button>
       <ul>
         {cartItems.map(item => (
           <li key={item.productId}>
