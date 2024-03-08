@@ -14,10 +14,12 @@ const Cart = () => {
   const handleCheckout = () => {
     dispatch(clearCart())
   }
+  const isCartEmpty = cartItems.length === 0
 
   return (
     <div>
       <h2>Shopping Cart</h2>
+      <button onClick={navigateBack}>{'< Back to Products'}</button>
       <ul>
         {cartItems.map(item => (
           <li key={item.productId}>
@@ -30,7 +32,7 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleCheckout}>Checkout</button>
+      {!isCartEmpty && <button onClick={handleCheckout}>Checkout</button>}
     </div>
   )
 }

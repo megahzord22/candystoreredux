@@ -35,12 +35,6 @@ const App = () => {
         <img className='candy-logo' src={candyLogo} alt='candy-logo' />{' '}
         <CartIcon />
       </h1>
-      {/* <nav> */}
-        {/* <ul>
-          <li><Link to="/">Products</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
-        </ul>
-      </nav> */}
       <Routes>
         <Route exact path="/" element={<Products/>} />
         <Route exact path="cart" element={<Cart/>} />
