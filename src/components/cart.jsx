@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from '../Redux/cartSlice'
+import { addProduct } from '../Redux/productSlice'
 
 const Cart = () => {
   const cartItems = useSelector(state => state.cart)
@@ -8,7 +9,8 @@ const Cart = () => {
 
   const handleRemoveFromCart = (productId, quantity) => {
     dispatch(removeFromCart({ productId, quantity }))
-  };
+    dispatch(addProduct({ productId, quantity }))
+  }
 
   return (
     <div>
