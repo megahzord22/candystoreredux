@@ -26,13 +26,25 @@
     background: linear-gradient(45deg, #ff6b6b, #ffb8b8); 
     z-index: -1; /* Behind the card content */
   }
+
+  .candy-name-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
   
   /* candy image */
   .candy-image {
     max-width: 100%;
     border-radius: 8px;
-    height: auto;
-    justify-content: center; 
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
   }
   
   /* candy name */
@@ -100,4 +112,61 @@ ul.candy-list {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.cart-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #cc4d39;
+}
+
+.checkout-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
   

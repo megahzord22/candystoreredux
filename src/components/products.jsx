@@ -24,7 +24,7 @@ const Products = () => {
       <ul className='candy-list'>
         {products.map(product => (
           <li key={product.id} className='candy-card'>
-            <div><img className='candy-image'src={product.photoUrl} alt={product.name}></img></div>
+            <div className='candy-name-container'><img className='candy-image'src={product.photoUrl} alt={product.name}></img></div>
             <div className='candy-name'>{product.name}</div>
             <div className='candy-price'>Price: ${product.price}</div>
             <div className='candy-stock'>In Stock: {product.inStock}</div>
