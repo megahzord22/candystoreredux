@@ -169,4 +169,7 @@ ul.candy-list {
   background-color: #45a049;
 }
 
-  
+.total {
+  margin-top: 15px;
+  font-weight: bold;
+}
