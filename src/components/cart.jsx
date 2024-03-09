@@ -60,7 +60,7 @@ const Cart = () => {
         {cartItems.map((item) => (
           <div key={item.productId} className="cart-item">
             <div className="cart-item-info">
-              <div className="item-name">{item.productName}</div>
+              <div className="item-name">{products.find(product => product.id === item.productId)?.name}</div>
               <div className="item-price">Price: ${products.find(product => product.id === item.productId)?.price}</div>
               <div className="item-quantity">Quantity: {item.quantity}</div>
               <div className="item-total-cost">
